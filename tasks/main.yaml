@@ -1,0 +1,23 @@
+---
+
+- name: Install Alert Scripts
+  template:
+    src: "{{ item }}.j2"
+    dest: "{{ zabbix_scripts_alertscripts_path }}/{{ item }}"
+    owner: zabbix
+    group: zabbix
+    mode: 0750
+  with_items: "{{ zabbix_scripts_alertscripts }}"
+  tags:
+    - zabbix_scripts_alertscripts
+
+- name: Install External Scripts
+  template:
+    src: "{{ item }}.j2"
+    dest: "{{ zabbix_scripts_externalscripts_path }}/{{ item }}"
+    owner: zabbix
+    group: zabbix
+    mode: 0750
+  with_items: "{{ zabbix_scripts_externalscripts }}"
+  tags:
+    - zabbix_scripts_externalscripts

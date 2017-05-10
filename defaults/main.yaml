@@ -1,0 +1,45 @@
+---
+
+# Default Alert Scripts path
+zabbix_scripts_alertscripts_path: /usr/lib/zabbix/alertscripts
+
+# List of Alert Scripts to install
+zabbix_scripts_alertscripts: []
+
+# Default External Scripts path
+zabbix_scripts_externalcripts_path: /usr/lib/zabbix/externalscripts
+
+# List of External Scripts to install
+zabbix_scripts_externalscripts: []
+
+
+######
+### Alert Scripts configuration
+######
+
+### Slack Alert Script
+
+# Slack channel URL
+# (!!! user must define this if the plugin is chosen for installation !!!)
+zabbix_scripts_slack_url: ""
+
+# Slack user name
+zabbix_scripts_slack_username: Zabbix
+
+# Slack recovery emoji
+zabbix_scripts_slack_emoji_recovery: ":smile:"
+
+# Slack problem emoji
+zabbix_scripts_slack_emoji_problem: ":frowning:"
+
+# Slack emoji for any other state
+zabbix_scripts_slack_emoji_other: ":ghost:"
+
+# Slack message
+zabbix_scripts_slack_message: "${subject}: $3"
+
+
+######
+### External Scripts configuration
+######
+

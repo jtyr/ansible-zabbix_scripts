@@ -1,0 +1,15 @@
+---
+
+galaxy_info:
+  author: Jiri Tyr
+  description: A role that installs Alert and External scripts for Zabbix Server and Proxy.
+  license: MIT
+  min_ansible_version: 2.2
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+  categories:
+    - monitoring
+dependencies: []
